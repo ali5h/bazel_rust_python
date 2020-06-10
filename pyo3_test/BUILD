@@ -10,3 +10,10 @@ rust_library(
         "//cargo:pyo3",
     ],
 )
+
+genrule(
+    name = "string_sum",
+    srcs = [":lib"],
+    outs = ["string_sum.so"],
+    cmd = "cp $< $@",
+)

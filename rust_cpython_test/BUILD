@@ -6,7 +6,18 @@ rust_library(
     name = "lib",
     srcs = ["src/lib.rs"],
     crate_type = "cdylib",
+    rustc_flags = [
+        "-Z",
+        "macro-backtrace",
+    ],
     deps = [
         "//cargo:cpython",
     ],
+)
+
+genrule(
+    name = "rust2py",
+    srcs = [":lib"],
+    outs = ["rust2py.so"],
+    cmd = "cp $< $@",
 )
