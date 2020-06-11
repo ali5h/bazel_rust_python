@@ -12,8 +12,20 @@ rust_library(
 )
 
 genrule(
-    name = "string_sum",
+    name = "string_sum.so",
     srcs = [":lib"],
     outs = ["string_sum.so"],
     cmd = "cp $< $@",
+)
+
+py_library(
+    name = "string_sum",
+    srcs = [],
+    data = [":string_sum.so"],
+)
+
+py_test(
+    name = "test",
+    srcs = ["test.py"],
+    deps = [":string_sum"],
 )
