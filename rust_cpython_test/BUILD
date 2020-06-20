@@ -16,8 +16,20 @@ rust_library(
 )
 
 genrule(
-    name = "rust2py",
+    name = "rust2py_gen",
     srcs = [":lib"],
     outs = ["rust2py.so"],
     cmd = "cp $< $@",
+)
+
+py_library(
+    name = "rust2py",
+    srcs = [],
+    data = [":rust2py.so"],
+)
+
+py_test(
+    name = "test",
+    srcs = ["test.py"],
+    deps = [":rust2py"],
 )
