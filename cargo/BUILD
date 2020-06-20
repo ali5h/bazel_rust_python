@@ -13,6 +13,10 @@ alias(
     actual = "@raze__cpython__0_5_0//:cpython",
 )
 alias(
+    name = "paste",
+    actual = "@raze__paste__0_1_17//:paste",
+)
+alias(
     name = "pyo3",
     actual = "@raze__pyo3__0_10_1//:pyo3",
 )

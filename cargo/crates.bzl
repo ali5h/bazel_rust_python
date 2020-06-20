@@ -188,21 +188,19 @@ def raze_fetch_remote_crates():
     )
 
     _new_http_archive(
-        name = "raze__paste__0_1_16",
-        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/paste/paste-0.1.16.crate",
+        name = "raze__paste__0_1_17",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/paste/paste-0.1.17.crate",
         type = "tar.gz",
-        sha256 = "d508492eeb1e5c38ee696371bf7b9fc33c83d46a7d451606b96458fbbbdc2dec",
-        strip_prefix = "paste-0.1.16",
-        build_file = Label("//cargo/remote:paste-0.1.16.BUILD"),
+        strip_prefix = "paste-0.1.17",
+        build_file = Label("//cargo/remote:paste-0.1.17.BUILD"),
     )
 
     _new_http_archive(
-        name = "raze__paste_impl__0_1_16",
-        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/paste-impl/paste-impl-0.1.16.crate",
+        name = "raze__paste_impl__0_1_17",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/paste-impl/paste-impl-0.1.17.crate",
         type = "tar.gz",
-        sha256 = "84f328a6a63192b333fce5fbb4be79db6758a4d518dfac6d54412f1492f72d32",
-        strip_prefix = "paste-impl-0.1.16",
-        build_file = Label("//cargo/remote:paste-impl-0.1.16.BUILD"),
+        strip_prefix = "paste-impl-0.1.17",
+        build_file = Label("//cargo/remote:paste-impl-0.1.17.BUILD"),
     )
 
     _new_http_archive(

@@ -34,7 +34,7 @@ rust_library(
     deps = [
         "@raze__libc__0_2_71//:libc",
         "@raze__num_traits__0_2_11//:num_traits",
-        "@raze__paste__0_1_16//:paste",
+        "@raze__paste__0_1_17//:paste",
         "@raze__python3_sys__0_5_0//:python3_sys",
     ],
     rustc_flags = [

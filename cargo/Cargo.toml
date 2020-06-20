@@ -6,6 +6,7 @@ version = "0.1.0"
 path = "fake.rs"
 
 [dependencies]
+paste = "0.1.17"
 
 [dependencies.pyo3]
 version = "0.10.1"

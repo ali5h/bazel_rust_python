@@ -41,7 +41,7 @@ rust_library(
         "@raze__inventory__0_1_6//:inventory",
         "@raze__libc__0_2_71//:libc",
         "@raze__parking_lot__0_10_2//:parking_lot",
-        "@raze__paste__0_1_16//:paste",
+        "@raze__paste__0_1_17//:paste",
         "@raze__pyo3cls__0_10_1//:pyo3cls",
         "@raze__unindent__0_1_5//:unindent",
     ],

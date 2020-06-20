@@ -23,24 +23,21 @@ load(
 )
 
 
-# Unsupported target "compiletest" with type "test" omitted
 
 rust_library(
-    name = "paste",
+    name = "paste_impl",
     crate_root = "src/lib.rs",
-    crate_type = "lib",
+    crate_type = "proc-macro",
     edition = "2018",
     srcs = glob(["**/*.rs"]),
     deps = [
-        "@raze__paste_impl__0_1_16//:paste_impl",
         "@raze__proc_macro_hack__0_5_16//:proc_macro_hack",
     ],
     rustc_flags = [
         "--cap-lints=allow",
     ],
-    version = "0.1.16",
+    version = "0.1.17",
     crate_features = [
     ],
 )
 
-# Unsupported target "test" with type "test" omitted
