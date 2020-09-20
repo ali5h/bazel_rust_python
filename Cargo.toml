@@ -2,5 +2,4 @@
 
 members = [
         "pyo3_test",
-        "rust_cpython_test",
 ]

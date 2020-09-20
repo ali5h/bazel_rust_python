@@ -1,22 +1,40 @@
 """
+@generated
 cargo-raze workspace build file.
 
 DO NOT EDIT! Replaced on runs of cargo-raze
 """
+
 package(default_visibility = ["//visibility:public"])
 
 licenses([
-  "notice" # See individual crates for specific licenses
+    "notice",  # See individual crates for specific licenses
 ])
+
+# Aliased targets
 alias(
     name = "cpython",
-    actual = "@raze__cpython__0_5_0//:cpython",
+    actual = "@raze__cpython__0_5_1//:cpython",
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
 )
+
 alias(
     name = "paste",
     actual = "@raze__paste__0_1_18//:paste",
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
 )
+
 alias(
     name = "pyo3",
     actual = "@raze__pyo3__0_12_1//:pyo3",
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
 )

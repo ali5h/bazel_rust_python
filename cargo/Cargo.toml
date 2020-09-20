@@ -9,7 +9,7 @@ path = "fake.rs"
 paste = "0.1.17"
 
 [dependencies.pyo3]
-version = "0.10.1"
+version = "0.12.1"
 features = ["extension-module"]
 
 [dependencies.cpython]
@@ -22,35 +22,17 @@ genmode = "Remote"
 # The target to generate BUILD rules for.
 target = "x86_64-unknown-linux-gnu"
 
-[raze.crates.proc-macro2.'1.0.18']
+[raze.crates.proc-macro2.'1.0.21']
 additional_flags = [
     "--cfg=use_proc_macro",
 ]
 
-[raze.crates.pyo3.'0.10.1']
+[raze.crates.pyo3.'0.12.1']
 additional_flags = [
  "--cfg=py_sys_config=\\\"WITH_THREAD\\\"",
  "--cfg=Py_3",
  "--cfg=Py_3_7",
+ "--cfg=Py_3_8",
 ]
 additional_build_file = "pyo3.extra.BUILD"
 data_attr = "[\":mds\"]"
-
-
-[raze.crates.python3-sys.'0.5.0']
-additional_flags = [
- "--cfg=py_sys_config=\\\"WITH_THREAD\\\"",
- "--cfg=Py_3_4",
- "--cfg=Py_3_5",
- "--cfg=Py_3_6",
- "--cfg=Py_3_7",
-]
-
-[raze.crates.cpython.'0.5.0']
-additional_flags = [
- "--cfg=py_sys_config=\\\"WITH_THREAD\\\"",
- "--cfg=Py_3_4",
- "--cfg=Py_3_5",
- "--cfg=Py_3_6",
- "--cfg=Py_3_7",
-]

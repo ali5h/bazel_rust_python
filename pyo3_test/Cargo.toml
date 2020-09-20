@@ -1,5 +1,5 @@
 [package]
-name = "rust_cpython"
+name = "pyo3_test"
 version = "0.1.0"
 authors = ["Ali Shariat <shariat@gmail.com>"]
 edition = "2018"
@@ -10,7 +10,4 @@ name = "pyo3_test"
 crate-type = ["cdylib"]
 
 [dependencies]
-
-[dependencies.pyo3]
-version = "0.10.1"
-features = ["extension-module"]
+pyo3 = { version = "0.12.1", features = ["extension-module"]}
